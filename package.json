@@ -1,0 +1,36 @@
+{
+  "name": "@reviewrouter/subscription-runtime-provider-codex",
+  "version": "0.0.0-main.0",
+  "description": "Codex provider adapter for Subscription Runtime.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/777genius/subscription-runtime-provider-codex.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "@reviewrouter/subscription-runtime-core": "git+https://github.com/777genius/subscription-runtime-core.git#main"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
